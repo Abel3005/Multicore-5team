@@ -3,13 +3,13 @@
 class Object
 {
 private:
-	cv::Point2d points[3];
+	
 	
 public:
+	cv::Point points[3];
+	cv::Point middlePoint;
 
-	cv::Point2d middlePoint;
-
-	Object(cv::Point2d a, cv::Point2d b, cv::Point2d c);
+	Object(cv::Point a, cv::Point b, cv::Point c);
 	Object();
 	~Object();
 

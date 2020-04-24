@@ -3,14 +3,23 @@
 #include "Object.h"
 #include "defaultParameter.h"
 
+using namespace std;
+using namespace cv;
 int main()
 {
 	Object objectList[100];
-	for (int i = 0; i < 100; i++)
-	{
-		objectList[i].calMidPoint();
-		std::cout << "[row" << i << "]: " << objectList[i].middlePoint.x<<" ";
-		std::cout << "[col" << i << "]: " << objectList[i].middlePoint.y << std::endl;
+	cv::Mat bgImage = cv::Mat::zeros(Maxlength, MaxHeight,CV_8UC1);
+	Mat img(Maxlength, MaxHeight, CV_8UC1);
+	img.setTo(0);
+	int npts = 3;
+
+	for (int i = 0; i < 100; i++) {
+		const Point* pts = (const cv::Point*) (objectList[i].points);
+		polylines(img, &pts, &npts, 1, true, Scalar(255, 255, 255));
 	}
+	
+	
+	imshow("result", img);
+	waitKey();
 	return 0;
 }

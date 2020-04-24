@@ -1,7 +1,7 @@
 #include "Object.h"
 #include "defaultParameter.h"
 using namespace cv;
-Object::Object(Point2d a, Point2d b, Point2d c) {
+Object::Object(Point a, Point b, Point c) {
 	points[0] = a;
 	points[1] = b;
 	points[2] = c;
