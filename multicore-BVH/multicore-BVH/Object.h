@@ -14,5 +14,6 @@ public:
 	~Object();
 
 	void calMidPoint();
+	void drawObject(cv::InputOutputArray img);
 };
 
