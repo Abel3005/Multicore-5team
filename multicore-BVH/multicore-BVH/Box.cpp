@@ -42,3 +42,61 @@ void Box::drawBox(cv::InputOutputArray img) {
 	cv::rectangle(img, boxPoint[0], boxPoint[1], cv::Scalar(0, 55, 255),+1,4);
 	
 }
+void Box::quick_sort_x(int start , int end) {
+	if (start >= end) {
+		return;
+	}
+
+	int pivot = start;
+	int i = pivot + 1;
+	int j = end;
+	Object temp;
+
+	while (i <= j) {
+		while (i <= end && objectList[i].middlePoint.x <= objectList[pivot].middlePoint.x)
+		{
+			i++;
+		}
+		while (j > start&& objectList[j].middlePoint.x >= objectList[pivot].middlePoint.x)
+		{
+			j--;
+		}
+		if (i > j) {
+			temp = objectList[j];
+			objectList[i] = objectList[j];
+			objectList[j] = temp;
+		}
+	}
+
+	quick_sort_x(start, j - 1);
+	quick_sort_x(j + 1, end);
+}
+void Box::quick_sort_y(int start, int end) {
+	if (start >= end) {
+		return;
+	}
+
+	int pivot = start;
+	int i = pivot + 1;
+	int j = end;
+	Object temp;
+
+	while (i <= j) {
+		while (i <= end && objectList[i].middlePoint.y <= objectList[pivot].middlePoint.y)
+		{
+			i++;
+		}
+		while (j > start&& objectList[j].middlePoint.y >= objectList[pivot].middlePoint.y)
+		{
+			j--;
+		}
+		if (i > j) {
+			temp = objectList[j];
+			objectList[i] = objectList[j];
+			objectList[j] = temp;
+		}
+	}
+
+	quick_sort_x(start, j - 1);
+	quick_sort_x(j + 1, end);
+}
