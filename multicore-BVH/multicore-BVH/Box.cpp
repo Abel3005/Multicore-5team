@@ -39,11 +39,9 @@ void Box::serial_calBox() {
 	middlePoint.y = (minY + maxY) / 2;
 }
 void Box::version1_calBox() {
-	int globalMinMax[num_thread][4];
-	int tempMinMax[num_thread][4];
-	int calblockNum = num_thread;
+	int globalMinMax[4][num_thread];
 	int minX = Maxlength, minY = MaxHeight, maxX = -1, maxY = -1;
-#pragma omp parallel num_threads(num_thread)
+#pragma omp parallel num_threads(num_thread) 
 	{
 		int my_num = omp_get_thread_num();
 		int minX = Maxlength, minY = MaxHeight, maxX = -1, maxY = -1;

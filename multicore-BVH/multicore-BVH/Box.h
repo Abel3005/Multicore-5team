@@ -13,6 +13,7 @@ public:
 	Box() {};
 	void serial_calBox();
 	void version1_calBox();
+
 	
 	void drawBox(cv::InputOutputArray img);
 	void quick_sort_x(int start, int end);

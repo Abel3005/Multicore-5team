@@ -1,6 +1,6 @@
 #pragma once
-#define Maxlength 1024
-#define MaxHeight 1024
-#define ObjectNums 10
-#define Max_Size 1024
+#define Maxlength 512
+#define MaxHeight 512
+#define ObjectNums 100
+#define Max_Size 512
 #define num_thread 4

@@ -14,7 +14,6 @@ public:
 	TreeNode(Box data, TreeNode* left, TreeNode* right );
 	TreeNode(Box data);
 	TreeNode();
-	TreeNode(const TreeNode& tcv);
 };
 
 class Tree
