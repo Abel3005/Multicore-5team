@@ -25,7 +25,7 @@ Tree::Tree(Box data) {
 }
 
 Tree::Tree(TreeNode* node) {
-	root = data;
+	root = node;
 }
 
 TreeNode* Tree::getRoot() {

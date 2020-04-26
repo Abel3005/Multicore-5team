@@ -10,6 +10,7 @@ public:
 	cv::Point boxPoint[2];
 	cv::Point middlePoint;
 	Box(Object* _objectList, int _objNum);
+	Box() {};
 	void serial_calBox();
 	void version1_calBox();
 	

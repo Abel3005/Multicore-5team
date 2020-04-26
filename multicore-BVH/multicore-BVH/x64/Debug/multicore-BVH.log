@@ -1,15 +1,28 @@
-﻿  main.cpp
+﻿  Zc:
+c1xx : error C2338: C++/CLI, C++/CX 또는 OpenMP에서는 2단계 이름 조회가 지원되지 않습니다. /Zc:twoPhase-를 사용하세요.
+c1xx : fatal error C1903: 이전 오류를 복구할 수 없습니다. 컴파일이 중지됩니다.
+  twoPhase-
+c1xx : error C2338: C++/CLI, C++/CX 또는 OpenMP에서는 2단계 이름 조회가 지원되지 않습니다. /Zc:twoPhase-를 사용하세요.
+c1xx : fatal error C1903: 이전 오류를 복구할 수 없습니다. 컴파일이 중지됩니다.
+  Box.cpp
+c1xx : error C2338: C++/CLI, C++/CX 또는 OpenMP에서는 2단계 이름 조회가 지원되지 않습니다. /Zc:twoPhase-를 사용하세요.
+c1xx : fatal error C1903: 이전 오류를 복구할 수 없습니다. 컴파일이 중지됩니다.
+  Delaunay.cpp
+c1xx : error C2338: C++/CLI, C++/CX 또는 OpenMP에서는 2단계 이름 조회가 지원되지 않습니다. /Zc:twoPhase-를 사용하세요.
+c1xx : fatal error C1903: 이전 오류를 복구할 수 없습니다. 컴파일이 중지됩니다.
+  DS_timer.cpp
+c1xx : error C2338: C++/CLI, C++/CX 또는 OpenMP에서는 2단계 이름 조회가 지원되지 않습니다. /Zc:twoPhase-를 사용하세요.
+c1xx : fatal error C1903: 이전 오류를 복구할 수 없습니다. 컴파일이 중지됩니다.
+  main.cpp
+c1xx : error C2338: C++/CLI, C++/CX 또는 OpenMP에서는 2단계 이름 조회가 지원되지 않습니다. /Zc:twoPhase-를 사용하세요.
+c1xx : fatal error C1903: 이전 오류를 복구할 수 없습니다. 컴파일이 중지됩니다.
+  Object.cpp
+c1xx : error C2338: C++/CLI, C++/CX 또는 OpenMP에서는 2단계 이름 조회가 지원되지 않습니다. /Zc:twoPhase-를 사용하세요.
+c1xx : fatal error C1903: 이전 오류를 복구할 수 없습니다. 컴파일이 중지됩니다.
+  ObjectReader.cpp
+c1xx : error C2338: C++/CLI, C++/CX 또는 OpenMP에서는 2단계 이름 조회가 지원되지 않습니다. /Zc:twoPhase-를 사용하세요.
+c1xx : fatal error C1903: 이전 오류를 복구할 수 없습니다. 컴파일이 중지됩니다.
   Tree.cpp
-C:\Users\Abel\Documents\Multicore-5team\multicore-BVH\multicore-BVH\Tree.cpp(5,1): error C2512: 'Box': 사용할 수 있는 적절한 기본 생성자가 없습니다.
-C:\Users\Abel\Documents\Multicore-5team\multicore-BVH\multicore-BVH\Box.h(4,7): message : 'Box' 선언을 참조하십시오.
-C:\Users\Abel\Documents\Multicore-5team\multicore-BVH\multicore-BVH\Tree.cpp(11,1): error C2512: 'Box': 사용할 수 있는 적절한 기본 생성자가 없습니다.
-C:\Users\Abel\Documents\Multicore-5team\multicore-BVH\multicore-BVH\Box.h(4,7): message : 'Box' 선언을 참조하십시오.
-C:\Users\Abel\Documents\Multicore-5team\multicore-BVH\multicore-BVH\Tree.cpp(18,1): error C2512: 'Box': 사용할 수 있는 적절한 기본 생성자가 없습니다.
-C:\Users\Abel\Documents\Multicore-5team\multicore-BVH\multicore-BVH\Box.h(4,7): message : 'Box' 선언을 참조하십시오.
-C:\Users\Abel\Documents\Multicore-5team\multicore-BVH\multicore-BVH\Tree.cpp(28,13): error C2563: 정식 매개 변수 목록과 일치하지 않는 항목이 있습니다.
-C:\Users\Abel\Documents\Multicore-5team\multicore-BVH\multicore-BVH\Tree.cpp(28,13): error C2568: '=': 함수 오버로드를 확인할 수 없습니다.
-C:\Users\Abel\Documents\Multicore-5team\multicore-BVH\multicore-BVH\Tree.cpp(28,13): message : 'const _Elem *std::data(std::initializer_list<_Elem>) noexcept'일 수 있습니다.
-C:\Users\Abel\Documents\Multicore-5team\multicore-BVH\multicore-BVH\Tree.cpp(28,13): message : 또는       '_Ty *std::data(_Ty (&)[_Size]) noexcept'
-C:\Users\Abel\Documents\Multicore-5team\multicore-BVH\multicore-BVH\Tree.cpp(28,13): message : 또는       'unknown-type std::data(const _Container &)'
-C:\Users\Abel\Documents\Multicore-5team\multicore-BVH\multicore-BVH\Tree.cpp(28,13): message : 또는       'unknown-type std::data(_Container &)'
+c1xx : error C2338: C++/CLI, C++/CX 또는 OpenMP에서는 2단계 이름 조회가 지원되지 않습니다. /Zc:twoPhase-를 사용하세요.
+c1xx : fatal error C1903: 이전 오류를 복구할 수 없습니다. 컴파일이 중지됩니다.
   코드를 생성하고 있습니다...
