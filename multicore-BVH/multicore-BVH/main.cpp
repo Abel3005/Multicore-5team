@@ -9,21 +9,22 @@ using namespace std;
 using namespace cv;
 int main()
 {
-	ObjectReader objectReader;
+	/*ObjectReader objectReader;
 	objectReader.readTxt("input.txt");
 
 	Object* objectList = objectReader.objectList;
-	int num = objectReader.num;
+	int num = objectReader.num;*/
+	Object objectList[100];
 
 	cv::Mat bgImage = cv::Mat::zeros(Maxlength, MaxHeight,CV_8UC1);
 	Mat img(Maxlength, MaxHeight, CV_8UC3);
 	img.setTo(0);
 	int npts = 3;
 
-	for (int i = 0; i < num; i++) {
+	for (int i = 0; i < ObjectNums; i++) {
 		objectList[i].drawObject(img);
 	}
-	Box box(objectList,num);
+	Box box(objectList, ObjectNums);
 	box.calBox();
 	box.drawBox(img);
 

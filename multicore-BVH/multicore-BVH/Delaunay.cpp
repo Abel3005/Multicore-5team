@@ -19,16 +19,17 @@ bool Delaunay::is_circum(tri cur, int i, vector<vect>& point) {
 	else return det <= 0;
 }
 int Delaunay::execute() {
-	freopen("input.txt", "rt", stdin);
-	freopen("output.txt", "w", stdout);
+	FILE* in, * out;
+	freopen_s(&in,"input.txt", "rt", stdin);
+	freopen_s(&out, "output.txt", "w", stdout);
 
 	int n;
-	scanf("%d", n);
+	scanf_s("%d", &n);
 	vector<vect> point(n + 3);
 	for (int i = 0; i < n; i++)
 	{
 		double x, y;
-		scanf("%lf %lf", &x, &y);
+		scanf_s("%lf %lf", &x, &y);
 		point[i] = vect(x, y);
 	}
 

@@ -1,12 +1,6 @@
 #pragma once
 #include "Object.h"
 using namespace std;
-class Delaunay
-{
-public:
-	bool is_circum(tri cur, int i, vector<vect>& point);
-	int execute();
-};
 struct vect {
 	int x;
 	int y;
@@ -78,4 +72,11 @@ struct tri {
 
 	}
 };
+class Delaunay
+{
+public:
+	bool is_circum(tri cur, int i, vector<vect>& point);
+	int execute();
+};
+
 
