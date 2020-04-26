@@ -156,6 +156,7 @@
   <ItemGroup>
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="Delaunay.cpp" />
+    <ClCompile Include="DS_timer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjectReader.cpp" />
@@ -164,6 +165,8 @@
     <ClInclude Include="Box.h" />
     <ClInclude Include="defaultParameter.h" />
     <ClInclude Include="Delaunay.h" />
+    <ClInclude Include="DS_definitions.h" />
+    <ClInclude Include="DS_timer.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjectReader.h" />
   </ItemGroup>
