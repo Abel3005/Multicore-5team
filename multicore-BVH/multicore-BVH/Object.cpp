@@ -23,6 +23,7 @@ void Object::calMidPoint(){
 }
 void Object::drawObject(cv::InputOutputArray img) {
 	int npts = 3;
+	scalarValue = 100+ (rand() % 156);
 	const Point* pts = (const cv::Point*) points;
 	fillPoly(img, &pts, &npts, 1,  Scalar(scalarValue, scalarValue, scalarValue));
 }

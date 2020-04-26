@@ -3,7 +3,7 @@ Box::Box(Object* _objectList, int _objNum) {
 	objectList = _objectList;
 	objNum = _objNum;
 }
-void Box::calBox() {
+void Box::serial_calBox() {
 	int minX = Maxlength, minY = MaxHeight, maxX = -1, maxY = -1;
 	for (int i = 0; i < objNum; i++)
 	{
@@ -35,6 +35,9 @@ void Box::calBox() {
 	boxPoint[1].y = maxY;
 	middlePoint.x = (minX + maxX) / 2;
 	middlePoint.y = (minY + maxY) / 2;
+}
+void Box::version1_calBox() {
+	
 }
 
 void Box::drawBox(cv::InputOutputArray img) {
