@@ -72,6 +72,7 @@ TreeNode* serial_execute(Object* List, int objectNum, int depth, cv::InputOutput
 	Box box(List, objectNum);
 	box.serial_calBox();
 	box.drawBox(img);
+	imshow("result", img);
 	TreeNode* node = new TreeNode(box);
 	Object* lList = new Object[objectNum];
 	Object* RList = new Object[objectNum];
@@ -127,6 +128,7 @@ TreeNode* version1_execute(Object* List, int objectNum, int depth, cv::InputOutp
 	Box box(List, objectNum);
 	box.version1_calBox();
 	box.drawBox(img);
+	imshow("result1", img);
 	TreeNode* node = new TreeNode(box);
 	Object* lList = new Object[objectNum];
 	Object* RList = new Object[objectNum];
@@ -179,6 +181,7 @@ TreeNode* version2_execute(Object* List, int objectNum, int depth, cv::InputOutp
 	Box box(List, objectNum);
 	box.serial_calBox();
 	box.drawBox(img);
+	imshow("result2", img);
 	TreeNode* node = new TreeNode(box);
 	Object* lList = new Object[objectNum];
 	Object* RList = new Object[objectNum];
@@ -216,6 +219,7 @@ TreeNode* version2_execute(Object* List, int objectNum, int depth, cv::InputOutp
 		}
 	}
 	if (call < log(num_thread)) {
+		call++;
 #pragma omp parallel sections num_threads(2)
 		{
 #pragma omp section
