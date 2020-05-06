@@ -19,9 +19,10 @@ int main()
 	/*ObjectReader objectReader;
 	objectReader.readTxt("input.txt");
 
-	Object* objectList = objectReader.objectList;
-	*/int num = ObjectNums;
-	Object objectList[100];
+	Object* objectList = objectReader.objectList;*/
+	int num = ObjectNums;
+	Object objectList[ObjectNums];
+
 	DS_timer timer(3);
 	timer.setTimerName(0, (char*)"Serial");
 	timer.setTimerName(1, (char*)"Version1");
@@ -30,9 +31,11 @@ int main()
 	Mat serial_img(Maxlength, MaxHeight, CV_8UC3);
 	Mat version1_img(Maxlength, MaxHeight, CV_8UC3);
 	Mat version2_img(Maxlength, MaxHeight, CV_8UC3);
+
 	serial_img.setTo(0);
 	version1_img.setTo(0);
 	version2_img.setTo(0);
+
 	int npts = 3;
 
 	for (int i = 0; i < ObjectNums; i++) {
@@ -40,16 +43,20 @@ int main()
 		objectList[i].drawObject(version1_img);
 		objectList[i].drawObject(version2_img);
 	}
+
 	timer.onTimer(0);
-	Tree tree(serial_execute(objectList, ObjectNums, 32, serial_img));
+	Tree tree(serial_execute(objectList, ObjectNums, 128, serial_img));
 	timer.offTimer(0);
+
 	timer.onTimer(1);
-	Tree tree1(version1_execute(objectList, ObjectNums, 32, version1_img));
+	Tree tree1(version1_execute(objectList, ObjectNums,128, version1_img));
 	timer.offTimer(1);
+
 	omp_set_nested(1);
 	timer.onTimer(2);
-	Tree tree2(version2_execute(objectList, ObjectNums, 32, version2_img));
+	Tree tree2(version2_execute(objectList, ObjectNums, 128, version2_img));
 	timer.offTimer(2);
+
 	imshow("result", serial_img);
 	imshow("result1",version1_img);
 	imshow("result2", version2_img);
@@ -72,7 +79,7 @@ TreeNode* serial_execute(Object* List, int objectNum, int depth, cv::InputOutput
 	Box box(List, objectNum);
 	box.serial_calBox();
 	box.drawBox(img);
-	imshow("result", img);
+	//imshow("result", img);
 	TreeNode* node = new TreeNode(box);
 	Object* lList = new Object[objectNum];
 	Object* RList = new Object[objectNum];
@@ -128,7 +135,7 @@ TreeNode* version1_execute(Object* List, int objectNum, int depth, cv::InputOutp
 	Box box(List, objectNum);
 	box.version1_calBox();
 	box.drawBox(img);
-	imshow("result1", img);
+	//imshow("result1", img);
 	TreeNode* node = new TreeNode(box);
 	Object* lList = new Object[objectNum];
 	Object* RList = new Object[objectNum];
@@ -169,7 +176,6 @@ TreeNode* version1_execute(Object* List, int objectNum, int depth, cv::InputOutp
 	node->left = serial_execute(lList, lnums, depth - 1, img);
 	node->right = serial_execute(RList, rnums, depth - 1, img);
 	return node;
-
 }
 TreeNode* version2_execute(Object* List, int objectNum, int depth, cv::InputOutputArray img)
 {
@@ -181,7 +187,7 @@ TreeNode* version2_execute(Object* List, int objectNum, int depth, cv::InputOutp
 	Box box(List, objectNum);
 	box.serial_calBox();
 	box.drawBox(img);
-	imshow("result2", img);
+	//imshow("result2", img);
 	TreeNode* node = new TreeNode(box);
 	Object* lList = new Object[objectNum];
 	Object* RList = new Object[objectNum];
